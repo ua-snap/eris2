@@ -139,7 +139,8 @@ naggStats <- reactive({ length(aggStats()) })
 
 BootSamples <- reactive({
 	x <- as.numeric(input$bootSamples)
-	if(is.na(x) || x > 10000) x <- 50
+	#if(is.na(x) || x > 10000) x <- 50
+    if(is.na(x) || x > 50) x <- 50
 	x
 })
 

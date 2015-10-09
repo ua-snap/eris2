@@ -17,7 +17,7 @@ column(4,
 				column(6,
 					conditionalPanel(condition="input.tsp != 'plot_spatial' && input.loctype !='Cities'", selectInput("aggStats", "Stat:", agg.stat.names, selected=agg.stat.names[1], width="100%")),
 					conditionalPanel(condition="input.tsp == 'plot_scatter' && input.loctype !='Cities'", selectInput("aggStats2", "Stat:", agg.stat.names, selected=agg.stat.names[1], width="100%")),
-					conditionalPanel(condition="input.tsp == 'plot_spatial' && input.loctype !='Cities'", selectInput("bootSamples", "Bootstrap samples [CAUTION!]:", c(50, 100, 250, 500, 1000, 2500, 5000, 10000), width="100%"))
+					conditionalPanel(condition="input.tsp == 'plot_spatial' && input.loctype !='Cities'", selectInput("bootSamples", "Bootstrap samples [CAUTION!]:", c(50), width="100%"))
 				)
 			),
 			checkboxInput("convert_units", "Convert units to F, in", FALSE),
